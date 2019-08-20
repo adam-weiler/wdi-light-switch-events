@@ -1,30 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
     const status = document.querySelector('.status');
-    status.innerText = 'The document is ready!'
+    // status.innerText = 'The document is ready!';
 
     const btnSwitch = document.querySelector('.switch');
+    // console.log(btnSwitch);
 
     const bodyElement = document.querySelector('body');
-
-    // console.log(btnSwitch);
 
     btnSwitch.addEventListener('click', (e) => {
         // console.log(e);
 
         let lightsOn = btnSwitch.className;
-        // console.log(lightsOn)
+        // console.log(lightsOn);
 
         if (lightsOn == 'switch on'){
             btnSwitch.className = 'switch off';
             bodyElement.className = 'dark';
-            // console.log('Turn it off!')
+            status.innerText = 'Hey, who turned off the lights?';
+            // console.log('Turn it off!');
         } else if (lightsOn == 'switch off') {
             btnSwitch.className = 'switch on';
             bodyElement.className = 'light';
-            // console.log('Turn it on!')
+            status.innerText = 'It\'s so bright in here!';
+            // console.log('Turn it on!');
         }
-
   })
-
 })
-
