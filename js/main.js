@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btnSwitch = document.querySelector('.switch');
 
+    const bodyElement = document.querySelector('body');
+
     // console.log(btnSwitch);
 
     btnSwitch.addEventListener('click', (e) => {
@@ -14,9 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (lightsOn == 'switch on'){
             btnSwitch.className = 'switch off';
+            bodyElement.className = 'dark';
             // console.log('Turn it off!')
         } else if (lightsOn == 'switch off') {
             btnSwitch.className = 'switch on';
+            bodyElement.className = 'light';
             // console.log('Turn it on!')
         }
 
